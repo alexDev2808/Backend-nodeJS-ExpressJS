@@ -1,0 +1,30 @@
+{
+  "name": "backend-nodejs-expressjs",
+  "version": "1.0.0",
+  "description": "Backend con Node JS: API REST con Express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexDev2808/Backend-nodeJS-ExpressJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexDev2808/Backend-nodeJS-ExpressJS/issues"
+  },
+  "homepage": "https://github.com/alexDev2808/Backend-nodeJS-ExpressJS#readme",
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.2"
+  }
+}
