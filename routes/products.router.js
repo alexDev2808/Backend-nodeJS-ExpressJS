@@ -31,11 +31,18 @@ router.get('/filter', (req, res) => {
 
 router.get('/:id', (req, res) => {
   const { id } = req.params;
-  res.json({
-      id,
-      name: 'Producto 2',
-      price: 120
-  })
+
+  if(id === '999'){
+    res.status(404).json({
+      message: 'Not found!'
+    })
+  }else{
+    res.status(200).json({
+        id,
+        name: 'Producto 2',
+        price: 120
+    })
+  }
 })
 
 // Filter se esta tomando como parametro, para solucionarlo simplemente se debe colocaar antes del endpoint dinamico
@@ -48,7 +55,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   const body = req.body;
-  res.json({
+  res.status(201).json({
     message: "created",
     data: body
   })
