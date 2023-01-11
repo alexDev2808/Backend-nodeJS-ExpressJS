@@ -20,11 +20,15 @@ router.get('/filter', (req, res) => {
   res.send("Yo soy un filter")
 })
 
-router.get('/:id',async (req, res) => {
-  const { id } = req.params;
-  const product = await service.findOne(id);
-  res.json(product)
+router.get('/:id',async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const product = await service.findOne(id);
+    res.json(product)
 
+  } catch (error) {
+    next(error)
+  }
 })
 
 // Filter se esta tomando como parametro, para solucionarlo simplemente se debe colocaar antes del endpoint dinamico
